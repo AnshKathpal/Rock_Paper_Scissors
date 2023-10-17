@@ -2,6 +2,7 @@ import random
 
 choices = ["rock", "paper", "scissors"]
 
+
 def determine_winner(user_choice, computer_choice):
     if user_choice == computer_choice:
         return "It's a tie!"
@@ -10,11 +11,12 @@ def determine_winner(user_choice, computer_choice):
     else:
         return "Computer wins!"
 
+
 def play_game():
     user_score = 0
     computer_score = 0
 
-    print("Welcome to Stone Paper Scissors!")
+    print("Welcome to Rock Paper Scissors!")
     print("---------------------------------")
     print("Rules: Rock beats Scissors, Scissors beats Paper, Paper beats Rock.")
     print("---------------------------------------------------------------------")
@@ -28,6 +30,7 @@ def play_game():
         computer_choice = random.choice(choices)
 
         if user_choice == "quit":
+            print("------------------------------")
             print("Thanks for playing!")
             break
 
@@ -45,7 +48,10 @@ def play_game():
         elif result == "Computer wins!":
             computer_score += 1
 
+        print("------------------------------")
         print("Score: You", user_score, "- Computer", computer_score)
+        print("------------------------------")
         print()
+
 
 play_game()
